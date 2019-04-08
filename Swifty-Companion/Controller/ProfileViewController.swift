@@ -39,9 +39,9 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
                     return cell
                 }
             case .projects:
-                if let cell = tableView.dequeueReusableCell(withIdentifier: "ProjectsCell", for: indexPath) as? ProjectTableViewCell {
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "projectsCell", for: indexPath) as? ProjectTableViewCell {
                     let sec = self.sections[indexPath.section] as! Projects
-                    cell.project = sec.projects[indexPath.section] as Project
+                    cell.project = sec.projects[indexPath.row] as Project
                     return cell
                 }
         }

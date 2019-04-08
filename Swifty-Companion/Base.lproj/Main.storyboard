@@ -297,48 +297,77 @@
                                             <outlet property="walletLabel" destination="rZ3-oe-lSL" id="n9R-48-4Ym"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="skillsCell" rowHeight="102" id="I8G-65-ilv" customClass="SkillTableViewCell" customModule="Swifty_Companion" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="331" width="414" height="102"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="skillsCell" rowHeight="109" id="I8G-65-ilv" customClass="SkillTableViewCell" customModule="Swifty_Companion" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="331" width="414" height="109"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I8G-65-ilv" id="Hzo-N4-vew">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="101.66666666666667"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="108.66666666666667"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ggO-1f-07e">
-                                                    <rect key="frame" x="20" y="11" width="374" height="80"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZIS-jc-vuS">
+                                                    <rect key="frame" x="20" y="11" width="374" height="87"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skill" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="2JO-en-rso">
-                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="36"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="58.333333333333336"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QpT-bx-fY3">
-                                                            <rect key="frame" x="0.0" y="44" width="374" height="36"/>
+                                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mN5-z6-MFY">
+                                                            <rect key="frame" x="0.0" y="66.333333333333329" width="374" height="20.666666666666671"/>
                                                             <color key="progressTintColor" red="0.34105490960000001" green="0.74721519339999998" blue="0.69811586699999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </progressView>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="ggO-1f-07e" firstAttribute="top" secondItem="Hzo-N4-vew" secondAttribute="topMargin" id="DLU-sL-0LK"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="ggO-1f-07e" secondAttribute="bottom" id="NEW-na-72S"/>
-                                                <constraint firstItem="ggO-1f-07e" firstAttribute="leading" secondItem="Hzo-N4-vew" secondAttribute="leadingMargin" id="YTM-Nc-pMI"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="ggO-1f-07e" secondAttribute="trailing" id="ruP-Wf-rnm"/>
+                                                <constraint firstItem="ZIS-jc-vuS" firstAttribute="top" secondItem="Hzo-N4-vew" secondAttribute="topMargin" id="Fb4-Wi-k2S"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ZIS-jc-vuS" secondAttribute="bottom" id="Grw-bI-kDW"/>
+                                                <constraint firstItem="ZIS-jc-vuS" firstAttribute="leading" secondItem="Hzo-N4-vew" secondAttribute="leadingMargin" id="ed1-en-pdc"/>
+                                                <constraint firstItem="ZIS-jc-vuS" firstAttribute="trailing" secondItem="Hzo-N4-vew" secondAttribute="trailingMargin" id="q7U-nm-ZjS"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="nameLabel" destination="2JO-en-rso" id="1F0-Vb-EG3"/>
-                                            <outlet property="progressView" destination="QpT-bx-fY3" id="Sf6-jS-2ha"/>
+                                            <outlet property="progressView" destination="mN5-z6-MFY" id="uIo-fR-2Sf"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="projectsCell" rowHeight="65" id="4Mg-hI-W26" customClass="ProjectTableViewCell" customModule="Swifty_Companion" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="433" width="414" height="65"/>
+                                        <rect key="frame" x="0.0" y="440" width="414" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Mg-hI-W26" id="3KV-uG-yL5">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="64.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="n1K-S9-9AO">
+                                                    <rect key="frame" x="20" y="11" width="374" height="43"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="4ax-RA-746">
+                                                            <rect key="frame" x="0.0" y="0.0" width="183" height="43"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="finalMark" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSg-P5-uSH">
+                                                            <rect key="frame" x="191" y="0.0" width="183" height="43"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="0.34105490960000001" green="0.74721519339999998" blue="0.69811586699999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="n1K-S9-9AO" secondAttribute="trailing" id="I1a-3U-LPd"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="n1K-S9-9AO" secondAttribute="bottom" id="Qmf-RR-VtK"/>
+                                                <constraint firstItem="n1K-S9-9AO" firstAttribute="top" secondItem="3KV-uG-yL5" secondAttribute="topMargin" id="dE7-2g-CZM"/>
+                                                <constraint firstItem="n1K-S9-9AO" firstAttribute="leading" secondItem="3KV-uG-yL5" secondAttribute="leadingMargin" id="hXd-4D-EPP"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="markLabel" destination="KSg-P5-uSH" id="nb4-wZ-sIM"/>
+                                            <outlet property="nameLabel" destination="4ax-RA-746" id="ZFA-4Q-qIx"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

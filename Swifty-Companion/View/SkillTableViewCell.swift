@@ -18,10 +18,7 @@ class SkillTableViewCell: UITableViewCell {
         didSet {
             if let s = self.skill {
                 nameLabel.text = s.name
-                progressView.transform = progressView.transform.scaledBy(x: 1, y: 4)
-                progressView.layer.cornerRadius = 10
-                progressView.clipsToBounds = true
-                progressView.progress = (s.level ?? 0) / 20
+                progressView.setProgress((s.level ?? 0) / 20, animated: true)
             }
         }
     }

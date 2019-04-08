@@ -13,7 +13,7 @@ class Project {
     var name: String?
     var finalMark: Int?
     var validate: Bool
-    
+
     init(name: String?, finalMark: Int?, validate: Bool) {
         self.name = name
         self.finalMark = finalMark
@@ -38,13 +38,16 @@ class Projects: ModelDelegate {
 
     init(json: JSON) {
         for (_, subJson) in json {
-            self.projects.append(
-                Project(
-                    name: subJson["project"]["name"].string,
-                    finalMark: subJson["final_mark"].int,
-                    validate: subJson["validated"].bool ?? false
+            if subJson["project"]["parent_id"].int ?? 0 == 0 {
+                self.projects.append(
+                    Project(
+                        name: subJson["project"]["name"].string,
+                        finalMark: subJson["final_mark"].int,
+                        validate: subJson["validated?"].bool ?? false
+                    )
                 )
-            )
+
+            }
         }
     }
 }
