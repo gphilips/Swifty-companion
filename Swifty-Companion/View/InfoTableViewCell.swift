@@ -57,9 +57,9 @@ class InfoTableViewCell: UITableViewCell {
                 else {
                     levelLabel.text = "level 0 - 0%"
                 }
-                progressBar.setProgress((u.levelPercent ?? 0) / 20, animated: true)
+                progressBar.setProgress(u.level! / 100, animated: true)
+                progressBar.transform = CGAffineTransform(scaleX: 1, y: 4)
 
-                avatar.layer.cornerRadius = avatar.frame.size.width / 3
                 avatar.layer.borderWidth = 2
                 avatar.layer.borderColor = UIColor.white.cgColor
                 avatar.clipsToBounds = true

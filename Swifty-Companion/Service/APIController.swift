@@ -84,7 +84,7 @@ class APIController {
                     case .failure(let error):
                         print(error)
                         if let vc = self.delegate {
-                            vc.displayAlert(title: "Error", message: "Please enter a login", typeAlert: TypeAlert.emptyField)
+                            vc.displayAlert(title: "Error", message: "Please enter a valid login", typeAlert: TypeAlert.emptyField)
                         }
                 }
         }

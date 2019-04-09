@@ -18,7 +18,7 @@ class ViewController: UIViewController, API42Delegate, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.textField.delegate = self
         self.API = APIController(delegate: self)
         self.API?.getAccessToken()
     }
@@ -28,13 +28,19 @@ class ViewController: UIViewController, API42Delegate, UITextFieldDelegate {
     }
     
     @IBAction func sendLogin(_ sender: UIButton) {
-        self.fetchUser()
+       self.fetchUser()
     }
     
     @IBAction func textFieldAction(_ sender: UITextField) {
         self.fetchUser()
     }
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let allowedChars = CharacterSet.letters
+        let charSet = CharacterSet(charactersIn: string)
+        return allowedChars.isSuperset(of: charSet)
+    }
+
     func fetchUser() {
         self.textField.endEditing(true)
         if let login = self.textField.text, !login.isEmpty {

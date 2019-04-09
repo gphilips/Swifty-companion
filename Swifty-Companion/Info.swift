@@ -39,12 +39,12 @@ struct Info {
         self.poolYear = json["pool_year"].string
         self.wallet = json["wallet"].int
         self.correctionPoint = json["correction_point"].int
-        self.image = setImage(image: json["image_url"].string!)
+        self.image = setImage(image: json["image_url"].string)
     }
     
-    func setImage(image: String) -> UIImage {
-        if !image.isEmpty {
-            let url = URL(string: image)
+    func setImage(image: String?) -> UIImage {
+        if let imageUrl = image, !imageUrl.isEmpty {
+            let url = URL(string: imageUrl)
             do {
                 let data = try Data(contentsOf: url!)
                 if let img = UIImage(data: data) {

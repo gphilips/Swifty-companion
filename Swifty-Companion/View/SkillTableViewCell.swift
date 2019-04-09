@@ -19,6 +19,7 @@ class SkillTableViewCell: UITableViewCell {
             if let s = self.skill {
                 nameLabel.text = s.name
                 progressView.setProgress((s.level ?? 0) / 20, animated: true)
+                progressView.transform = CGAffineTransform(scaleX: 1, y: 4)
             }
         }
     }
