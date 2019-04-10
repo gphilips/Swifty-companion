@@ -35,13 +35,13 @@ class InfoTableViewCell: UITableViewCell {
                     nameLabel.text = ""
                 }
                 walletLabel.text = String(describing: u.wallet ?? 0) + " ₳"
-                campusLabel.text = u.campus ?? ""
-                gradeLabel.text = u.grade ?? ""
+                campusLabel.text = u.campus ?? "No campus"
+                gradeLabel.text = u.grade ?? "No grade"
                 pointLabel.text = String(describing: u.correctionPoint ?? 0)
-                promoLabel.text = "Promo \(u.poolYear ?? "")"
-                loginLabel.text = u.login ?? ""
-                phoneLabel.text = u.phone ?? "0000000000"
-                emailLabel.text = u.email ?? ""
+                promoLabel.text = "Promo \(u.poolYear ?? "unknown")"
+                loginLabel.text = u.login ?? "No login"
+                phoneLabel.text = u.phone ?? "No phone"
+                emailLabel.text = u.email ?? "No email"
                 if let loc = u.location, loc != "null" {
                     availableLabel.text = "Available"
                     positionLabel.text = loc
@@ -57,7 +57,7 @@ class InfoTableViewCell: UITableViewCell {
                 else {
                     levelLabel.text = "level 0 - 0%"
                 }
-                progressBar.setProgress(u.level! / 100, animated: true)
+                progressBar.setProgress(u.levelPercent!, animated: true)
                 progressBar.transform = CGAffineTransform(scaleX: 1, y: 4)
 
                 avatar.layer.borderWidth = 2

@@ -36,7 +36,8 @@ class ViewController: UIViewController, API42Delegate, UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let allowedChars = CharacterSet.letters
+        let allowedChars = NSMutableCharacterSet(charactersIn: "-")
+        allowedChars.formUnion(with: .letters)
         let charSet = CharacterSet(charactersIn: string)
         return allowedChars.isSuperset(of: charSet)
     }
